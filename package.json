@@ -1,0 +1,18 @@
+{
+  "name": "eventHub",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jordi Fernandez",
+  "license": "ISC",
+  "dependencies": {
+    "crypto": "0.0.3",
+    "eventhub": "^1.0.2",
+    "guid": "0.0.12",
+    "https": "^1.0.0",
+    "random-js": "^1.0.8"
+  }
+}
