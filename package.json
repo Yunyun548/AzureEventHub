@@ -13,6 +13,7 @@
     "eventhub": "^1.0.2",
     "guid": "0.0.12",
     "https": "^1.0.0",
+    "infinite-loop": "^0.2.2",
     "random-js": "^1.0.8"
   }
 }

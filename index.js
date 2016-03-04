@@ -2,6 +2,7 @@ var random = require("random-js")();
 var Guid = require("guid");
 var https = require('https');
 var crypto = require('crypto');
+var InfiniteLoop = require('infinite-loop');
 var config = require('./config.json');
 
 // Event Hubs parameters
@@ -104,7 +105,8 @@ function randomModel()
 			break;
 	}
 }
-for (var i = 1; i < 50; i++)
+
+function sendEvent()
 {
     var voiture = new Voiture(randomBrand(), randomModel(), Guid.create().value, random.integer(100, 140), random.integer(1, 728));
 
@@ -157,3 +159,7 @@ for (var i = 1; i < 50; i++)
 	req.write(JSON.stringify(voiture));
 	req.end();
 }
+
+var il = new InfiniteLoop();
+il.add(sendEvent);
+il.run();
